@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Gas Booking</div>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('booking')">Book Gas</a></li>
+            <li><a href="#" onclick="showSection('track')">Track Order</a></li>
+            <li><a href="#" onclick="showSection('admin')">Admin</a></li>
+            <li><a href="#" onclick="showSection('login')">Login</a></li>
+            <li><a href="#" onclick="showSection('signup')" class="btn-nav">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <h1>Book Your Gas Cylinder Easily</h1>
+        <p>Fast, Reliable, and Hassle-Free Gas Booking System</p>
+        <div class="btn-container">
+            <button onclick="showSection('booking')" class="btn">Book Now</button>
+            <button onclick="showSection('signup')" class="btn secondary">Create Account</button>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section id="login" class="container hidden">
+        <h2>Login</h2>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showSection('signup')">Sign Up</a></p>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section id="signup" class="container hidden">
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showSection('login')">Login</a></p>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="container hidden">
+        <h2>Book a Gas Cylinder</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="text" placeholder="Delivery Address" required>
+            <select>
+                <option value="1">1 Cylinder</option>
+                <option value="2">2 Cylinders</option>
+            </select>
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+    </section>
+
+    <!-- Order Tracking Section -->
+    <section id="track" class="container hidden">
+        <h2>Track Your Order</h2>
+        <input type="text" placeholder="Enter Order ID">
+        <button class="btn">Track</button>
+        <p>Order Status: Pending</p>
+    </section>
+
+    <!-- Admin Dashboard Section -->
+    <section id="admin" class="container hidden">
+        <h2>Admin Dashboard</h2>
+        <p>Manage Orders, Users, and Inventory</p>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.container').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>

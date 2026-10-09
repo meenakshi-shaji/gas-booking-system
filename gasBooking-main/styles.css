@@ -1,0 +1,181 @@
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #d32f2f;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background: #b71c1c;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #880e4f;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #b71c1c, #880e4f);
+    color: white;
+    padding: 140px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    background: white;
+    color: #b71c1c;
+    border: 2px solid #b71c1c;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: auto;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: #b71c1c;
+    color: white;
+}
+
+/* Secondary Button */
+.secondary {
+    background: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.secondary:hover {
+    background: #970000;
+}
+
+/* Button Placement */
+.btn-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Containers */
+.container {
+    background: white;
+    padding: 40px;
+    margin: 90px auto;
+    width: 80%;
+    max-width: 450px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Hide Sections Initially */
+.hidden {
+    display: none;
+}
+
+/* Forms */
+form input, form select, form button {
+    display: block;
+    width: 100%;
+    margin: 12px auto;
+    padding: 14px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Links */
+p a {
+    color: #b71c1c;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
